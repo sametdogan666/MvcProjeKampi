@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Business.Concrete;
+using Entities.Concrete;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -22,5 +23,18 @@ namespace MvcProjeKampi.Controllers
             return View(categoryValues);
         }
 
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult AddCategory(Category category)
+        {
+            categoryManager.AddCategory(category);
+            return RedirectToAction("GetAll");
+        }
     }
 }
