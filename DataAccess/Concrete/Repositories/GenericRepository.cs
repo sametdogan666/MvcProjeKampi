@@ -37,7 +37,7 @@ namespace DataAccess.Concrete.Repositories
             return _object.ToList();
         }
 
-        public List<T> Lsit(Expression<Func<T, bool>> filter)
+        public List<T> List(Expression<Func<T, bool>> filter)
         {
             return _object.Where(filter).ToList();
         }

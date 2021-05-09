@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Business.Concrete;
+using DataAccess.EntityFramework;
 using Entities.Concrete;
 
 namespace MvcProjeKampi.Controllers
@@ -11,7 +12,7 @@ namespace MvcProjeKampi.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
-        private CategoryManager categoryManager = new CategoryManager();
+        private CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         public ActionResult Index()
         {
             return View();
@@ -33,7 +34,7 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category category)
         {
-            categoryManager.AddCategory(category);
+            //categoryManager.AddCategory(category);
             return RedirectToAction("GetAll");
         }
     }

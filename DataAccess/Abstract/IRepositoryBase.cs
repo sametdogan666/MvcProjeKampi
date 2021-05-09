@@ -13,6 +13,6 @@ namespace DataAccess.Abstract
         void Insert(T p);
         void Delete(T p);
         void Update(T p);
-        List<T> Lsit(Expression<Func<T, bool>> filter);
+        List<T> List(Expression<Func<T, bool>> filter);
     }
 }

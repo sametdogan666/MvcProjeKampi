@@ -33,7 +33,7 @@ namespace DataAccess.Concrete.Repositories
             return _object.ToList();
         }
 
-        public List<Category> Lsit(Expression<Func<Category, bool>> filter)
+        public List<Category> List(Expression<Func<Category, bool>> filter)
         {
             throw new NotImplementedException();
         }
