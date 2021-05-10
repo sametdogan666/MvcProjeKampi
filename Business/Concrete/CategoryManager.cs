@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
 using DataAccess.Abstract;
 using DataAccess.Concrete.Repositories;
 using Entities.Concrete;
+using FluentValidation.Results;
 
 namespace Business.Concrete
 {
@@ -24,6 +26,11 @@ namespace Business.Concrete
         public List<Category> GetAll()
         {
             return _categoryDal.List();
+        }
+
+        public void AddCategory(Category category)
+        {
+            _categoryDal.Insert(category);
         }
     }
 }

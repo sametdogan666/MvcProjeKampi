@@ -4,8 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Business.Concrete;
+using global::Business.ValidationRules.FluentValidation;
 using DataAccess.EntityFramework;
 using Entities.Concrete;
+using FluentValidation.Results;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -34,8 +36,23 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category category)
         {
-            //categoryManager.AddCategory(category);
-            return RedirectToAction("GetAll");
+            CategoryValidator categoryValidator = new CategoryValidator();
+            ValidationResult validationResult = categoryValidator.Validate(category);
+            if (validationResult.IsValid)
+            {
+                categoryManager.AddCategory(category);
+                return RedirectToAction("GetAll");
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
+            return View();
         }
     }
+    
 }
