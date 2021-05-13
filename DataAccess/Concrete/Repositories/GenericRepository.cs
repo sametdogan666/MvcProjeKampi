@@ -26,6 +26,11 @@ namespace DataAccess.Concrete.Repositories
             _mvcContext.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter); //Sadece bir değer döndermek için SingleOrDefault metodu kullanılır.
+        }
+
         public void Insert(T p)
         {
             _object.Add(p);
