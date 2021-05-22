@@ -21,8 +21,7 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(x => x.WriterAbout).NotEmpty().WithMessage("Yazar Hakkında Kısmını Boş Geçemezsiniz");
             RuleFor(x => x.WriterMail).NotEmpty().WithMessage("Yazar Mail Kısmını Boş Geçemezsiniz");
             RuleFor(p => p.WriterMail).Must(Contains).WithMessage("Email @ işareti içermelidir");
-
-
+            RuleFor(x => x.WriterTitle).NotEmpty().WithMessage("Yazar Ünvanını Boş Geçemezsiniz");
         }
 
         private bool Contains(string arg)
