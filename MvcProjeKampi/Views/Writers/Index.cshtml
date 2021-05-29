@@ -19,6 +19,7 @@
     </section>
     <section class="content">
         <div class="card card-solid">
+            <a href="/Writers/AddWriter" class="btn btn-success" style="float: right">Yeni Yazar Girişi</a>
             <div class="card-body pb-0">
                 <div class="row d-flex align-items-stretch">
                     @foreach (var item in Model)
@@ -47,7 +48,7 @@
                                         <a href="#" class="btn btn-sm bg-teal">
                                             <i class="fas fa-comments">Yazarın Başlıkları</i>
                                         </a>
-                                        <a href="/Writer/EditWriter/@item.WriterId" class="btn btn-sm btn-primary">
+                                        <a href="/Writers/EditWriter/@item.WriterId" class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> Profili Düzenle
                                         </a>
                                     </div>

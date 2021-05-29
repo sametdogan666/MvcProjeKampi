@@ -11,9 +11,9 @@ using FluentValidation.Results;
 
 namespace MvcProjeKampi.Controllers
 {
-    public class CategoryController : Controller
+    public class CategoriesController : Controller
     {
-        // GET: Category
+        // GET: Categories
         private CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         public ActionResult Index()
         {

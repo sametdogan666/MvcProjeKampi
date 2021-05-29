@@ -11,7 +11,7 @@ using FluentValidation.Results;
 
 namespace MvcProjeKampi.Controllers
 {
-    public class WriterController : Controller
+    public class WritersController : Controller
     {
         private WriterManager _writerManager = new WriterManager(new EfWriterDal());
         WriterValidator writerValidator = new WriterValidator();
