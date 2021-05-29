@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{F03A8A46-C4C7-486D-A472-5AADBF3CC6A1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "İstatistikView", "İstatistikView", "{A910B5BD-B206-4974-85EA-220620BB2619}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\statisticsView.png = ..\..\..\Desktop\statisticsView.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

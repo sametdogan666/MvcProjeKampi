@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>İstatistik Sayfası</h1>
+<br />
+<br />
+<div class="container">
+    
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        
+        <div class="card text-white bg-warning mb-3" style="max-width: 18rem; margin-right: 3rem; margin-top: 3rem;">
+            <div class="card-header">Toplam Kategori Sayısı</div>
+            <div class="card-body">
+                <h1 class="card-body" style="text-align: center">@ViewBag.v1</h1>
+            </div>
+        </div>
+
+        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;  margin-right: 3rem; margin-top: 3rem;">
+            <div class="card-header">Yazılım Kategorisine Ait Başlık Sayısı</div>
+            <div class="card-body">
+                <h1 class="card-body" style="text-align: center">@ViewBag.v2</h1>
+            </div>
+        </div>
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-right: 3rem; margin-top: 3rem;">
+            <div class="card-header">Adında 'A' Harfi Geçen Yazar Sayısı</div>
+            <div class="card-body">
+                <h1 class="card-body" style="text-align: center">@ViewBag.v3</h1>
+            </div>
+        </div>
+
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;  margin-right: 3rem; margin-top: 3rem;">
+            <div class="card-header">En Fazla Başlığa Sahip Kategori Adı</div>
+            <div class="card-body">
+                <h1 class="card-body" style="text-align: center">@ViewBag.v4</h1>
+            </div>
+        </div>
+
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin-right: 3rem; margin-top: 3rem;">
+            <div class="card-header">True - False Farkı</div>
+            <div class="card-body">
+                <h1 class="card-body" style="text-align: center">@ViewBag.v5</h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+
