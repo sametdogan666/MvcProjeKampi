@@ -2288,8 +2288,8 @@
     <Content Include="Views\Headings\Index.cshtml" />
     <Content Include="Views\Headings\AddHeading.cshtml" />
     <Content Include="Views\Statistics\Index.cshtml" />
-    <Content Include="Views\Headings\ContentByHeading.cshtml" />
     <Content Include="Views\Contents\ContentByHeading.cshtml" />
+    <Content Include="Views\Headings\EditHeading.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

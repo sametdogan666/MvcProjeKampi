@@ -51,22 +51,25 @@
         <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
-                <tr>
-                    <th style="width: 1%">
-                        #
-                    </th>
-                    <th style="width: 20%">
-                        Başlık Adı
-                    </th>
-                    <th style="width: 30%">
-                        Oluşturan Yazar
-                    </th>
-                    <th style="width: 8%" class="text-center">
-                        Kategori
-                    </th>
-                    <th style="width: 20%">
-                    </th>
-                </tr>
+                    <tr>
+                        <th style="width: 1%">
+                            #
+                        </th>
+                        <th style="width: 20%">
+                            Başlık Adı
+                        </th>
+                        <th style="width: 15%">
+                            Oluşturan Yazar
+                        </th>
+                        <th style="width: 10%">
+                           Durum
+                        </th>
+                        <th style="width: 8%" class="text-center">
+                            Kategori
+                        </th>
+                        <th style="width: 20%">
+                        </th>
+                    </tr>
                 </thead>
                 <tbody>
                 @foreach (var item in Model)
@@ -91,6 +94,9 @@
                                 </li>
                             </ul>
                         </td>
+                        <td>
+                            @item.HeadingStatus
+                        </td>
                         <td class="project-state">
                             <span class="badge badge-warning">@item.Category.CategoryName</span>
                         </td>
@@ -100,12 +106,12 @@
                                 </i>
                                 Yazılar
                             </a>
-                            <a class="btn btn-info btn-sm" href="#">
+                            <a class="btn btn-info btn-sm" href="/Headings/EditHeading/@item.HeadingId">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Düzenle
                             </a>
-                            <a class="btn btn-danger btn-sm" href="#">
+                            <a class="btn btn-danger btn-sm" href="/Headings/DeleteHeading/@item.HeadingId">
                                 <i class="fas fa-trash">
                                 </i>
                                 Sil

@@ -30,7 +30,7 @@ namespace MvcProjeKampi.Controllers
                                                       Text = x.CategoryName,
                                                       Value = x.CategoryId.ToString()
                                                   }).ToList();
-            
+
             List<SelectListItem> valueWriter = (from x in _writerManager.GetAll()
                                                 select new SelectListItem
                                                 {
@@ -50,9 +50,32 @@ namespace MvcProjeKampi.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult ContentByHeading()
+        [HttpGet]
+        public ActionResult EditHeading(int id)
         {
-            return View();
+            List<SelectListItem> valueCategory = (from x in _categoryManager.GetAll()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryId.ToString()
+                                                  }).ToList();
+            ViewBag.vlc = valueCategory;
+            var HeadingValue = _headingManager.GetById(id);
+            return View(HeadingValue);
+        }
+
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+            _headingManager.UpdateHeading(heading);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = _headingManager.GetById(id) ;
+            _headingManager.DeleteHeading(HeadingValue);
+            return RedirectToAction("Index");
         }
     }
 }
