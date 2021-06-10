@@ -4,6 +4,8 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<!DOCTYPE html>
+<html>
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -13,27 +15,44 @@
         </div>
     </div>
 </section>
-<section class="content">
-    <div class="card card-solid">
-        <a href="/AdminCategories/AddCategory" class="btn btn-success">Yeni Kategori Girişi</a>
-    </div>
-</section>
-<table class="table table-bordered">
-    <tr>
-        <th>#</th>
-        <th>Kategori Adı</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
-        <th>Başlıklar</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <th>@item.CategoryId</th>
-            <td>@item.CategoryName</td>
-            <td><a href="/AdminCategories/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
-            <td><a href="/AdminCategories/UpdateCategory/@item.CategoryId" class="btn btn-warning">Güncelle</a></td>
-            <td><a href="#" class="btn btn-info">Başlıklar</a></td>
-        </tr>
-    }
-</table>
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <section class="content">
+            <div class="card card-solid">
+                <a href="/AdminCategories/AddCategory" class="btn btn-success">Yeni Kategori Girişi</a>
+            </div>
+        </section>
+
+        <table class="table table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Kategori Adı</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+                <th>Başlıklar</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.CategoryId</th>
+                    <td>@item.CategoryName</td>
+                    <td><a href="/AdminCategories/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/AdminCategories/UpdateCategory/@item.CategoryId" class="btn btn-warning">Güncelle</a></td>
+                    <td><a href="#" class="btn btn-info">Başlıklar</a></td>
+                </tr>
+            }
+        </table>
+    </section>
+</body>
+</html>

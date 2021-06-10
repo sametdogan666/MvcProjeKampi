@@ -16,7 +16,7 @@ namespace MvcProjeKampi.Controllers
         public ActionResult Index()
         {
             var AboutValues = _aboutManager.GetAll();
-            return View();
+            return View(AboutValues);
         }
 
         [HttpGet]
@@ -30,6 +30,11 @@ namespace MvcProjeKampi.Controllers
         {
             _aboutManager.AddAbout(about);
             return RedirectToAction("Index");
+        }
+
+        public PartialViewResult AboutPartial()
+        {
+            return PartialView();
         }
     }
 }
