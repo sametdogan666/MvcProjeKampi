@@ -18,14 +18,19 @@ namespace Business.Concrete
             _messageDal = messageDal;
         }
 
-        public List<Message> GetAll()
+        public List<Message> GetAllInbox()
         {
             return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
         }
 
+        public List<Message> GetAllSendbox()
+        {
+            return _messageDal.List(x => x.SenderMail =="admin@gmail.com");
+        }
+
         public void AddMessage(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Insert(message);
         }
 
         public void DeleteMessage(Message message)
