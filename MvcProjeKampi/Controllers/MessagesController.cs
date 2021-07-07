@@ -26,6 +26,12 @@ namespace MvcProjeKampi.Controllers
             return View(messageList);
         }
 
+        public ActionResult GetInBoxMessageDetails(int id)
+        {
+            var Values = _messageManager.GetById(id);
+            return View(Values);
+        }
+
         [HttpGet]
         public ActionResult NewMessage()
         {
