@@ -137,6 +137,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentsController.cs" />
+    <Compile Include="Controllers\ErrorPagesController.cs" />
     <Compile Include="Controllers\HeadingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
@@ -168,6 +169,12 @@
     <Content Include="AdminLTE-3.0.4\build\npm\DocsPublish.js" />
     <Content Include="AdminLTE-3.0.4\build\npm\Plugins.js" />
     <Content Include="AdminLTE-3.0.4\build\npm\Publish.js" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\colorlib-error-404-6\css\style.css" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\colorlib-error-404-6\index.html" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\colorlib-error-404-6\readme.txt" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\__MACOSX\colorlib-error-404-6\._index.html" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\__MACOSX\colorlib-error-404-6\._readme.txt" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\__MACOSX\colorlib-error-404-6\css\._style.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\adminlte.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\adminlte.min.css" />
     <Content Include="AdminLTE-3.0.4\dist\css\alt\adminlte.components.css" />
@@ -2248,6 +2255,8 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\__MACOSX\._colorlib-error-404-6" />
+    <Content Include="AdminLTE-3.0.4\colorlib-error-404-6\__MACOSX\colorlib-error-404-6\._css" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2303,6 +2312,7 @@
     <Content Include="Views\Messages\NewMessage.cshtml" />
     <Content Include="Views\Messages\GetInBoxMessageDetails.cshtml" />
     <Content Include="Views\Messages\GetSendBoxMessageDetails.cshtml" />
+    <Content Include="Views\ErrorPages\Page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
