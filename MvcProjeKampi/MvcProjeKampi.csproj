@@ -138,6 +138,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentsController.cs" />
     <Compile Include="Controllers\ErrorPagesController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
@@ -313,6 +314,12 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\images\riri1.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\riri2.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\riri3.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\riri4.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\riri5.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\riri6.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
@@ -2313,6 +2320,7 @@
     <Content Include="Views\Messages\GetInBoxMessageDetails.cshtml" />
     <Content Include="Views\Messages\GetSendBoxMessageDetails.cshtml" />
     <Content Include="Views\ErrorPages\Page404.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
