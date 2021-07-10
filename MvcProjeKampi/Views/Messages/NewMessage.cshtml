@@ -1,4 +1,4 @@
-﻿
+﻿@model Entities.Concrete.Message
 @{
     ViewBag.Title = "NewMessage";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -42,6 +42,7 @@
                 @Html.Action("MessageListMenu", "Contact")
                 <!-- /.col -->
                 <div class="col-md-9">
+                    @using (Html.BeginForm("NewMessage", "Messages", FormMethod.Post)) { 
                     <div class="card card-primary card-outline">
                         <div class="card-header">
                             <h3 class="card-title">Yeni Mesaj Oluştur</h3>
@@ -49,13 +50,18 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Alıcı:">
+                                @Html.Label("Alıcı Adı")
+                                @Html.TextBoxFor(x=>x.ReceiverMail, new{@class = "form-control"})
+                                @Html.ValidationMessageFor(x=>x.ReceiverMail, "", new { @class = "text-danger" })
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Konu:">
+                                @Html.Label("Konu")
+                                @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.Subject, "", new { @class = "text-danger" })
                             </div>
                             <div class="form-group">
-                                <textarea id="compose-textarea" class="form-control" style="height: 300px">
+                                @Html.Label("Mesajınız")
+                                <textarea id="compose-textarea" name="MessageContent" class="form-control" style="height: 300px">
                                
                                
                                 </textarea>
@@ -78,6 +84,7 @@
                         </div>
                         <!-- /.card-footer -->
                     </div>
+                    }
                     <!-- /.card -->
                 </div>
                 <!-- /.col -->
