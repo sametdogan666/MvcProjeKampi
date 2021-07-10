@@ -331,7 +331,7 @@
     <Content Include="AdminLTE-3.0.4\login-form-19\css\bootstrap\utilities\_stretched-link.css" />
     <Content Include="AdminLTE-3.0.4\login-form-19\css\bootstrap\_media.css" />
     <Content Include="AdminLTE-3.0.4\login-form-19\css\style.css" />
-    <Content Include="AdminLTE-3.0.4\login-form-19\images\bg.jpg" />
+    <Content Include="AdminLTE-3.0.4\login-form-19\images\admin.png" />
     <Content Include="AdminLTE-3.0.4\login-form-19\index.html" />
     <Content Include="AdminLTE-3.0.4\login-form-19\js\bootstrap.min.js" />
     <Content Include="AdminLTE-3.0.4\login-form-19\js\jquery.min.js" />

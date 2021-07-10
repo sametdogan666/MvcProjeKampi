@@ -8137,8 +8137,9 @@ body {
   font-size: 14px;
   line-height: 1.8;
   font-weight: normal;
-  background: #fbd1b7;
-  color: gray; }
+  background: #D9D2D2;
+  color: gray;
+}
 
 a {
   -webkit-transition: .3s all ease;
