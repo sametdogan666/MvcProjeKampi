@@ -17,6 +17,8 @@ namespace MvcProjeKampi.Controllers
 
         private MessageManager _messageManager = new MessageManager(new EfMessageDal());
         private MessageValidator _messageValidator = new MessageValidator();
+        
+        [Authorize]
         public ActionResult Inbox()
         {
             var messageList = _messageManager.GetAllInbox();
