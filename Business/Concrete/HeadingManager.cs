@@ -23,6 +23,11 @@ namespace Business.Concrete
             return _headingDal.List();
         }
 
+        public List<Heading> GetAllByWriter(int id)
+        {
+            return _headingDal.List(x => x.WriterId == id);
+        }
+
         public void AddHeading(Heading heading)
         {
             _headingDal.Insert(heading);
