@@ -20,12 +20,12 @@ namespace Business.Concrete
 
         public List<Message> GetAllInbox()
         {
-            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
+            return _messageDal.List(x => x.ReceiverMail == "samet@samet.com");
         }
 
         public List<Message> GetAllSendbox()
         {
-            return _messageDal.List(x => x.SenderMail =="admin@gmail.com");
+            return _messageDal.List(x => x.SenderMail == "samet@samet.com");
         }
 
         public void AddMessage(Message message)

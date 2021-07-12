@@ -71,5 +71,13 @@ namespace MvcProjeKampi.Controllers
             return RedirectToAction("MyHeading");
         }
 
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = _headingManager.GetById(id);
+            HeadingValue.HeadingStatus = false;
+            _headingManager.DeleteHeading(HeadingValue);
+            return RedirectToAction("MyHeading");
+        }
+
     }
 }
