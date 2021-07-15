@@ -24,6 +24,11 @@ namespace Business.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Content> GetAllByWriter()
+        {
+            return _contentDal.List(x => x.WriterId == 4);
+        }
+
         public List<Content> GetAllByHeadingId(int id)
         {
             return _contentDal.List(x => x.HeadingId == id);

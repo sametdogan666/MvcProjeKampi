@@ -8,7 +8,7 @@ using FluentValidation;
 
 namespace Business.ValidationRules.FluentValidation
 {
-    public class MessageValidator:AbstractValidator<Message>
+    public class MessageValidator : AbstractValidator<Message>
     {
         public MessageValidator()
         {
@@ -16,7 +16,9 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(x => x.Subject).NotEmpty().WithMessage("Konuyu Boş Geçemezsiniz");
             RuleFor(x => x.MessageContent).NotEmpty().WithMessage("Mesajı Boş Geçemezsiniz");
             //RuleFor(p => p.ReceiverMail).Must(Contains).WithMessage("Alıcı Mail Adresi @ işareti içermelidir");
-           // RuleFor(p => p.SenderMail).Must(Contains).WithMessage("Gönderici Mail Adresi @ işareti içermelidir");
+            // RuleFor(p => p.SenderMail).Must(Contains).WithMessage("Gönderici Mail Adresi @ işareti içermelidir");
+            RuleFor(p => p.ReceiverMail).EmailAddress().WithMessage("Alıcı Mail Adresini Doğru Formatta Giriniz");
+            RuleFor(p => p.SenderMail).EmailAddress().WithMessage("Gönderici Mail Adresini Doğru Formatta Giriniz");
             RuleFor(x => x.Subject).MinimumLength(3).WithMessage("Lütfen En Az 3 Karakter Girişi Yapınız");
             RuleFor(x => x.Subject).MaximumLength(100).WithMessage("Lütfen 100 Karakterden Fazla Değer Girişi Yapmayınız");
         }
