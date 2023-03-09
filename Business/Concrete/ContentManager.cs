@@ -21,7 +21,7 @@ namespace Business.Concrete
 
         public List<Content> GetAll()
         {
-            throw new NotImplementedException();
+            return _contentDal.List();
         }
 
         public List<Content> GetAllByWriter(int id)

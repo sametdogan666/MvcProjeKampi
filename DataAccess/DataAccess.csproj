@@ -108,21 +108,9 @@
     <Compile Include="Migrations\202106011929384_mig_headingStatus.designer.cs">
       <DependentUpon>202106011929384_mig_headingStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106281206341_mig_addMessage.cs" />
-    <Compile Include="Migrations\202106281206341_mig_addMessage.designer.cs">
-      <DependentUpon>202106281206341_mig_addMessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107100644035_contact_AddDate.cs" />
-    <Compile Include="Migrations\202107100644035_contact_AddDate.designer.cs">
-      <DependentUpon>202107100644035_contact_AddDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107101556130_add_ImageFile.cs" />
-    <Compile Include="Migrations\202107101556130_add_ImageFile.designer.cs">
-      <DependentUpon>202107101556130_add_ImageFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107101638224_mig_adminTable.cs" />
-    <Compile Include="Migrations\202107101638224_mig_adminTable.designer.cs">
-      <DependentUpon>202107101638224_mig_adminTable.cs</DependentUpon>
+    <Compile Include="Migrations\202303082034396_migAddedNewTable.cs" />
+    <Compile Include="Migrations\202303082034396_migAddedNewTable.designer.cs">
+      <DependentUpon>202303082034396_migAddedNewTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,17 +147,8 @@
     <EmbeddedResource Include="Migrations\202106011929384_mig_headingStatus.resx">
       <DependentUpon>202106011929384_mig_headingStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106281206341_mig_addMessage.resx">
-      <DependentUpon>202106281206341_mig_addMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107100644035_contact_AddDate.resx">
-      <DependentUpon>202107100644035_contact_AddDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107101556130_add_ImageFile.resx">
-      <DependentUpon>202107101556130_add_ImageFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107101638224_mig_adminTable.resx">
-      <DependentUpon>202107101638224_mig_adminTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303082034396_migAddedNewTable.resx">
+      <DependentUpon>202303082034396_migAddedNewTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

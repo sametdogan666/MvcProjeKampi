@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using DataAccess.EntityFramework;
 using Entities.Concrete;
 
@@ -13,6 +14,7 @@ namespace MvcProjeKampi.Controllers
     {
         private HeadingManager _headingManager = new HeadingManager(new EfHeadingDal());
         private CategoryManager _categoryManager = new CategoryManager(new EfCategoryDal());
+        MvcContext mvcContext = new MvcContext();
 
         // GET: WriterPanel
         public ActionResult WriterProfile()
@@ -20,10 +22,12 @@ namespace MvcProjeKampi.Controllers
             return View();
         }
 
-        public ActionResult MyHeading()
+        public ActionResult MyHeading(string p)
         {
-            //id = 4;
-            var values = _headingManager.GetAllByWriter();
+            string writerMailInfo = (string)Session["WriterMail"];
+            var writerIdInfo = mvcContext.Writers.Where(x=>x.WriterMail == writerMailInfo).Select(y=>y.WriterId).FirstOrDefault();
+            var values = _headingManager.GetAllByWriter(writerIdInfo);
+
             return View(values);
         }
 
@@ -43,8 +47,10 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading heading)
         {
+            string writerMailInfo = (string)Session["WriterMail"];
+            var writerIdInfo = mvcContext.Writers.Where(x => x.WriterMail == writerMailInfo).Select(y => y.WriterId).FirstOrDefault();
             heading.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            heading.WriterId = 4;
+            heading.WriterId = writerIdInfo;
             heading.HeadingStatus = true;
             _headingManager.AddHeading(heading);
             return RedirectToAction("MyHeading");

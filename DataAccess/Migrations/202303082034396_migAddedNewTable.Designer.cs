@@ -7,13 +7,13 @@ namespace DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class mig_adminTable : IMigrationMetadata
+    public sealed partial class migAddedNewTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(mig_adminTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(migAddedNewTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202107101638224_mig_adminTable"; }
+            get { return "202303082034396_migAddedNewTable"; }
         }
         
         string IMigrationMetadata.Source

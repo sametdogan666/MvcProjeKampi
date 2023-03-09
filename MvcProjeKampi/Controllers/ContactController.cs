@@ -16,6 +16,7 @@ namespace MvcProjeKampi.Controllers
 
         private ContactValidator _contactValidator = new ContactValidator();
         // GET: Contact
+       
         public ActionResult Index()
         {
             var ContactValues = _contactManager.GetAll();
