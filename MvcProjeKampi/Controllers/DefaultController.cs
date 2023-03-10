@@ -1,4 +1,4 @@
-﻿using Business.Concrete;
+﻿ using Business.Concrete;
 using DataAccess.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -16,9 +16,9 @@ namespace MvcProjeKampi.Controllers
         ContentManager contentManager = new ContentManager(new EfContentDal());
 
 
-        public PartialViewResult Index()
+        public PartialViewResult Index(int id = 0)
         {
-            var contentList  = contentManager.GetAll(); 
+            var contentList  = contentManager.GetAllByHeadingId(id); 
             return PartialView(contentList);
         }
 

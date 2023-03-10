@@ -36,7 +36,7 @@ namespace Business.Concrete
 
         public void AddContent(Content content)
         {
-            throw new NotImplementedException();
+            _contentDal.Insert(content);
         }
 
         public Content GetById(int id)
