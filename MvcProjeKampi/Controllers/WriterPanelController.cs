@@ -7,6 +7,7 @@ using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.EntityFramework;
 using Entities.Concrete;
+using PagedList;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -85,9 +86,9 @@ namespace MvcProjeKampi.Controllers
             return RedirectToAction("MyHeading");
         }
 
-        public ActionResult AllHeading()
+        public ActionResult AllHeading(int page = 1)
         {
-            var headings = _headingManager.GetAll();
+            var headings = _headingManager.GetAll().ToPagedList(page,3);
             return View(headings);
         }
 
