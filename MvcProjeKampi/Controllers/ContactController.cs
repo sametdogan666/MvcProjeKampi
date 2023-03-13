@@ -16,7 +16,7 @@ namespace MvcProjeKampi.Controllers
 
         private ContactValidator _contactValidator = new ContactValidator();
         // GET: Contact
-       
+
         public ActionResult Index()
         {
             var ContactValues = _contactManager.GetAll();
@@ -29,15 +29,15 @@ namespace MvcProjeKampi.Controllers
             return View(ContactValues);
         }
 
-        public PartialViewResult MessageListMenu()
+        public PartialViewResult MessageListMenu(string p)
         {
             var contact = _contactManager.GetAll().Count();
             ViewBag.contact = contact;
 
-            var sendMail = _messageManager.GetAllSendbox().Count();
+            var sendMail = _messageManager.GetAllSendbox(p).Count();
             ViewBag.sendMail = sendMail;
 
-            var receiverMail = _messageManager.GetAllInbox().Count();
+            var receiverMail = _messageManager.GetAllInbox(p).Count();
             ViewBag.receiverMail = receiverMail;
 
             //var draftMail = _messageManager.GetAllSendbox().Where(m => m.IsDraft == true).Count();

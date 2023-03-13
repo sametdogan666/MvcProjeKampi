@@ -9,7 +9,7 @@ using Entities.Concrete;
 
 namespace Business.Concrete
 {
-    public class MessageManager:IMessageService
+    public class MessageManager : IMessageService
     {
         private IMessageDal _messageDal;
 
@@ -18,14 +18,14 @@ namespace Business.Concrete
             _messageDal = messageDal;
         }
 
-        public List<Message> GetAllInbox()
+        public List<Message> GetAllInbox(string receiver)
         {
-            return _messageDal.List(x => x.ReceiverMail == "samet@samet.com");
+            return _messageDal.List(x => x.ReceiverMail == receiver);
         }
 
-        public List<Message> GetAllSendbox()
+        public List<Message> GetAllSendbox(string sender)
         {
-            return _messageDal.List(x => x.SenderMail == "samet@samet.com");
+            return _messageDal.List(x => x.SenderMail == sender);
         }
 
         public void AddMessage(Message message)

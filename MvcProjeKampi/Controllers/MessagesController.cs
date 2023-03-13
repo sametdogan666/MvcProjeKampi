@@ -19,15 +19,15 @@ namespace MvcProjeKampi.Controllers
         private MessageValidator _messageValidator = new MessageValidator();
         
         [Authorize]
-        public ActionResult Inbox()
+        public ActionResult Inbox(string p)
         {
-            var messageList = _messageManager.GetAllInbox();
+            var messageList = _messageManager.GetAllInbox(p);
             return View(messageList);
         }
 
-        public ActionResult SendBox()
+        public ActionResult SendBox(string p)
         {
-            var messageList = _messageManager.GetAllSendbox();
+            var messageList = _messageManager.GetAllSendbox(p);
             return View(messageList);
         }
 
